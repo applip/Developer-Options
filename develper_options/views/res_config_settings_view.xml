@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="res_config_settings_view_form" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.developer</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='about']" position="before">
+                    <div id="developer_options">
+                        <h2>Developer Options</h2>
+                        <div class="row mt16 o_settings_container" name="developer_options">
+                            <div class="col-12 col-lg-6 o_setting_box" id="enable_debug">
+                                <div class="o_setting_left_pane">
+                                    <field name="enable_debug"/>
+                                </div>
+                                <div class="o_setting_right_pane">
+                                    <label for="enable_debug"/>
+                                    <div class="text-muted">
+                                        Weather the Developer mode should be enabled or not
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 o_setting_box" id="debug_alias" t-if="enable_debug">
+                                <div class="o_setting_right_pane">
+                                    <label for="debug_alias"/>
+                                    <field name="debug_alias"/>
+                                    <div class="text-muted">
+                                        Query Parameter will be used to control developer mode from URLs
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
