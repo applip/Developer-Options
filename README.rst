@@ -23,6 +23,11 @@ Download the module and add it to your Odoo addons folder. Restart the server
 and log on to your Odoo server. Select the Apps menu and upgrade the module by
 clicking on the upgrade button.
 
+Features
+========
+
+* Activate or disable debug mode
+* Set custom URL parameter for Debug Mode
 
 Configuration
 =============
